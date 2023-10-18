@@ -4,24 +4,24 @@
 ===========================================
 '''
 from langchain.llms import CTransformers
-from dotenv import find_dotenv, load_dotenv
-import box
-import yaml
+import json
 
-# Load environment variables from .env file
-load_dotenv(find_dotenv())
+def load_env_from_file(file_path):
 
-# Import config vars
-with open('config/config.yml', 'r', encoding='utf8') as ymlfile:
-    cfg = box.Box(yaml.safe_load(ymlfile))
+  with open(file_path, 'r') as f:
+    env = json.load(f)
+
+  return env
+cfg = load_env_from_file('config/config.json')
+
 
 
 def build_llm():
     # Local CTransformers model
-    llm = CTransformers(model=cfg.MODEL_BIN_PATH,
-                        model_type=cfg.MODEL_TYPE,
-                        config={'max_new_tokens': cfg.MAX_NEW_TOKENS,
-                                'temperature': cfg.TEMPERATURE}
+    llm = CTransformers(model=cfg['MODEL_BIN_PATH'],
+                        model_type=cfg['MODEL_TYPE'],
+                        config={'max_new_tokens': cfg['MAX_NEW_TOKENS'],
+                                'temperature': cfg['TEMPERATURE']}
                         )
 
     return llm
