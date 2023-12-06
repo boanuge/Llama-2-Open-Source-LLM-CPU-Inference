@@ -1,5 +1,35 @@
 @ https://www.youtube.com/watch?v=gdzeE6ys2nM
 
+PS C:\AI\Llama-2-Open-Source-LLM-CPU-Inference_@_github.com> conda activate base
+PS C:\AI\Llama-2-Open-Source-LLM-CPU-Inference_@_github.com> python .\db_build.py
+PS C:\AI\Llama-2-Open-Source-LLM-CPU-Inference_@_github.com> python .\main.py   
+
+## Answer: Jesus is the Christ, the Son of God.
+==================================================
+
+Source Document 1
+
+Source Text: Matthew 16:13 Now when Jesus had come into the parts of Caesarea Philippi, he said, questioning his disciples, Who do men say that the Son of man is?
+Matthew 16:14 And they said, Some say, John the Baptist; some, Elijah; and others, Jeremiah, or one of the prophets.
+Matthew 16:15 He says to them, But who do you say that I am?
+Matthew 16:16 And Simon Peter made answer and said, You are the Christ, the Son of the living God.
+Document Name: data\data_5_bible_english_BBE.txt
+
+============================================================
+
+Source Document 2
+
+Source Text: John 20:31 But these are recorded, so that you may have faith that Jesus is the Christ, the Son of God, and so that, having this faith you may have life in his name.
+John 21:1 After these things Jesus let himself be seen again by the disciples at the sea of Tiberias; and it came about in this way.
+John 21:2 Simon Peter, Thomas named Didymus, Nathanael of Cana in Galilee, the sons of Zebedee, and two others of his disciples were all together.
+Document Name: data\data_5_bible_english_BBE.txt
+
+============================================================
+Time to retrieve response: 52.476544000000004
+PS C:\AI\Llama-2-Open-Source-LLM-CPU-Inference_@_github.com>
+
+
+
 # Running Llama 2 and other Open-Source LLMs on CPU Inference Locally for Document Q&A
 
 ### Clearly explained guide for running quantized open-source LLM applications on CPUs using LLama 2, C Transformers, GGML, and LangChain
