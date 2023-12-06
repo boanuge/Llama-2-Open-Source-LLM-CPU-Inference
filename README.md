@@ -1,3 +1,5 @@
+@ https://www.youtube.com/watch?v=gdzeE6ys2nM
+
 # Running Llama 2 and other Open-Source LLMs on CPU Inference Locally for Document Q&A
 
 ### Clearly explained guide for running quantized open-source LLM applications on CPUs using LLama 2, C Transformers, GGML, and LangChain
