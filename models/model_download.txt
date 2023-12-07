@@ -20,3 +20,8 @@ To support symlinks on Windows, you either need to activate Developer Mode or to
 './models--TheBloke--Llama-2-7B-Chat-GGML\\snapshots\\76cd63c351ae389e1d4b91cab2cf470aab11864b\\llama-2-7b-chat.ggmlv3.q4_0.bin'
 >>> quit()
 PS C:\AI\Llama-2-Open-Source-LLM-CPU-Inference_@_github.com\models> 
+
+PS C:\AI\Llama-2-Open-Source-LLM-CPU-Inference_@_github.com\models> python
+>>> from huggingface_hub import hf_hub_download
+>>> hf_hub_download(repo_id="TheBloke/Llama-2-13B-Chat-GGML", filename="llama-2-13b-chat.ggmlv3.q8_0.bin", cache_dir="./")
+>>> quit()
