@@ -10,7 +10,8 @@ if __name__ == "__main__":
     dbqa = setup_dbqa()
     #response = dbqa({'query': 'How much is the minimum guarantee payable by adidas?'})
     #response = dbqa({'query': '예수님이 누구신가요?'}) # 한국어 인식은 잘 안되는듯함
-    response = dbqa({'query': 'Who is Jesus?'})
+    #response = dbqa({'query': 'Who is Jesus?'})
+    response = dbqa({'query': 'Who is Holy Spirit?'})
     end = timeit.default_timer()
 
     print(f'\nAnswer: {response["result"]}')
