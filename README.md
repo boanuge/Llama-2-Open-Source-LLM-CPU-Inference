@@ -1,3 +1,27 @@
+================================================================================<br>
+Issue Solution : import langchain TypeError: issubclass() arg 1 must be a class<br>
+================================================================================<br>
+...<br>
+  File "pydantic\main.py", line 198, in pydantic.main.ModelMetaclass.__new__<br>
+  File "pydantic\fields.py", line 506, in pydantic.fields.ModelField.infer<br>
+  File "pydantic\fields.py", line 436, in pydantic.fields.ModelField.__init__<br>
+  File "pydantic\fields.py", line 552, in pydantic.fields.ModelField.prepare<br>
+  File "pydantic\fields.py", line 663, in pydantic.fields.ModelField._type_analysis<br>
+  File "pydantic\fields.py", line 808, in pydantic.fields.ModelField._create_sub_type<br>
+  File "pydantic\fields.py", line 436, in pydantic.fields.ModelField.__init__<br>
+  File "pydantic\fields.py", line 552, in pydantic.fields.ModelField.prepare<br>
+  File "pydantic\fields.py", line 668, in pydantic.fields.ModelField._type_analysis<br>
+  File "C:\ProgramData\Anaconda3\lib\typing.py", line 852, in __subclasscheck__<br>
+    return issubclass(cls, self.__origin__)<br>
+TypeError: issubclass() arg 1 must be a class<br>
+PS C:\AI\ai_@_wwhss_alpha_version_orca2_13b><br>
+<br>
+First, try the following:<br>
+(base) $ pip install typing-inspect==0.8.0 typing_extensions==4.5.0<br>
+If above command is not resolve the issue, then:<br>
+(base) $ pip install pydantic -U<br>
+(base) $ pip install pydantic==1.10.11<br>
+<br>
 ### @ https://www.youtube.com/watch?v=gdzeE6ys2nM
 
 PS C:\AI\Llama-2-Open-Source-LLM-CPU-Inference_@_github.com> conda activate base <br>
